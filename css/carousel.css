@@ -1,0 +1,200 @@
+/* Notes on the classes:
+1. .carousel.pointer-event should ideally be pan-y (to allow for users to scroll vertically)
+   even when their scroll action started on a carousel, but for compatibility (with Firefox)
+   we're preventing all actions instead
+2. The .carousel-item-start and .carousel-item-end is used to indicate where
+   the active slide is heading.
+3. .active.carousel-item is the current slide.
+4. .active.carousel-item-start and .active.carousel-item-end is the current
+   slide in its in-transition state. Only one of these occurs at a time.
+5. .carousel-item-next.carousel-item-start and .carousel-item-prev.carousel-item-end
+   is the upcoming slide in transition.
+*/
+
+.carousel {
+    position: relative;
+  }
+  
+  .carousel.pointer-event {
+    touch-action: pan-y;
+  }
+  
+  .carousel-inner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .carousel-item {
+    position: relative;
+    display: none;
+    float: left;
+    width: 100%;
+    margin-right: -100%;
+    backface-visibility: hidden;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+  }
+  
+  .carousel-item.active,
+  .carousel-item-next,
+  .carousel-item-prev {
+    display: block;
+  }
+  
+  .carousel-item-next:not(.carousel-item-start),
+  .active.carousel-item-end {
+    transform: translateX(100%);
+  }
+  
+  .carousel-item-prev:not(.carousel-item-end),
+  .active.carousel-item-start {
+    transform: translateX(-100%);
+  }
+  
+  /* Alternate transitions */
+  
+  .carousel-fade .carousel-item {
+    opacity: 0;
+    transition-property: opacity;
+    transform: none;
+  }
+  
+  .carousel-fade .carousel-item.active,
+  .carousel-fade .carousel-item-next.carousel-item-start,
+  .carousel-fade .carousel-item-prev.carousel-item-end {
+    z-index: 1;
+    opacity: 1;
+  }
+  
+  .carousel-fade .active.carousel-item-start,
+  .carousel-fade .active.carousel-item-end {
+    z-index: 0;
+    opacity: 0;
+    transition: opacity 0s 0.6s;
+  }
+  
+  /* Left/right controls for nav */
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; /* Assuming a value for $carousel-control-width */
+    padding: 0;
+    color: #fff; /* Assuming a value for $carousel-control-color */
+    text-align: center;
+    background: none;
+    border: 0;
+    opacity: 0.5; /* Assuming a value for $carousel-control-opacity */
+    transition: opacity 0.15s ease;
+  
+    &:hover,
+    &:focus {
+      color: #fff; /* Assuming a value for $carousel-control-color */
+      text-decoration: none;
+      outline: 0;
+      opacity: 0.75; /* Assuming a value for $carousel-control-hover-opacity */
+    }
+  }
+  
+  .carousel-control-prev {
+    left: 0;
+    background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.001)); /* Assuming $black */
+  }
+  
+  .carousel-control-next {
+    right: 0;
+    background-image: linear-gradient(270deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.001)); /* Assuming $black */
+  }
+  
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    display: inline-block;
+    width: 30px; /* Assuming a value for $carousel-control-icon-width */
+    height: 30px; /* Assuming a value for $carousel-control-icon-width */
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 100% 100%;
+  }
+  
+  .carousel-control-prev-icon {
+    background-image: url('prev-icon.svg'); /* Assuming the use of escape-svg */
+  }
+  
+  .carousel-control-next-icon {
+    background-image: url('next-icon.svg'); /* Assuming the use of escape-svg */
+  }
+  
+  /* Optional indicator pips/controls */
+  
+  .carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-right: 30px; /* Assuming $carousel-control-width */
+    margin-bottom: 1rem;
+    margin-left: 30px; /* Assuming $carousel-control-width */
+  }
+  
+  .carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 10px; /* Assuming $carousel-indicator-width */
+    height: 10px; /* Assuming $carousel-indicator-height */
+    padding: 0;
+    margin-right: 5px; /* Assuming $carousel-indicator-spacer */
+    margin-left: 5px; /* Assuming $carousel-indicator-spacer */
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #007bff; /* Assuming $carousel-indicator-active-bg */
+    background-clip: padding-box;
+    border: 0;
+    border-top: 2px solid transparent; /* Assuming $carousel-indicator-hit-area-height */
+    border-bottom: 2px solid transparent; /* Assuming $carousel-indicator-hit-area-height */
+    opacity: 0.5; /* Assuming $carousel-indicator-opacity */
+    transition: opacity 0.15s ease;
+  }
+  
+  .carousel-indicators .active {
+    opacity: 1;
+  }
+  
+  /* Optional captions */
+  
+  .carousel-caption {
+    position: absolute;
+    right: 50%;
+    bottom: 20px; /* Assuming $carousel-caption-spacer */
+    left: 50%;
+    transform: translateX(-50%);
+    padding-top: 10px; /* Assuming $carousel-caption-padding-y */
+    padding-bottom: 10px; /* Assuming $carousel-caption-padding-y */
+    color: #fff; /* Assuming $carousel-caption-color */
+    text-align: center;
+  }
+  
+  /* Dark mode carousel */
+  
+  .carousel-dark .carousel-control-prev-icon,
+  .carousel-dark .carousel-control-next-icon {
+    filter: invert(1); /* Assuming $carousel-dark-control-icon-filter */
+  }
+  
+  .carousel-dark .carousel-indicators [data-bs-target] {
+    background-color: #333; /* Assuming $carousel-dark-indicator-active-bg */
+  }
+  
+  .carousel-dark .carousel-caption {
+    color: #ccc; /* Assuming $carousel-dark-caption-color */
+  }
+  

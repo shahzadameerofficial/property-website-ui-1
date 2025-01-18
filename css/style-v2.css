@@ -1,0 +1,181 @@
+#amenities .card-text {
+  display: inline;
+}
+
+#photogallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 4;
+  grid-gap: 2rem;
+}
+#photogallery img {
+  width: 100%;
+  height: 331px;
+  border-radius: 1rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media screen and (max-width: 991px) {
+  #photogallery img {
+    height: 188px !important;
+  }
+}
+#photogallery img:nth-child(1) {
+  aspect-ratio: 16/5;
+  grid-column: 2 span;
+}
+#photogallery img:nth-child(4) {
+  aspect-ratio: 16/5;
+  grid-column: 2 span;
+}
+#photogallery img:nth-child(5) {
+  aspect-ratio: 16/5;
+  grid-column: 2 span;
+}
+#photogallery img:nth-child(8) {
+  aspect-ratio: 16/5;
+  grid-column: 2 span;
+}
+
+.sidebar-social {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  translate: 0 -50%;
+  list-style: none;
+  padding: 5px;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#carouselExample img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+#carouselExample button {
+  background-color: transparent;
+  box-shadow: none;
+  margin: 0 30px;
+}
+#carouselExample button span {
+  font-size: 4rem;
+  color: #20BCC9;
+  background-color: #fff;
+  display: flex;
+  border-radius: 50%;
+}
+
+#media-section #media-section-tabs.nav.nav-tabs {
+  display: flex;
+  justify-content: center;
+  width: -moz-max-content;
+  width: max-content;
+  margin: 0 auto;
+  background-color: #F7F7F7;
+  border: 1px solid #DFE2EB;
+  border-radius: 0.5rem;
+  padding: 4px;
+}
+#media-section #media-section-tabs.nav.nav-tabs button {
+  border: 0;
+  outline: 0;
+  padding: 0.5rem 4rem;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  color: #9AA5B1;
+  font-weight: 600;
+}
+#media-section #media-section-tabs.nav.nav-tabs button.active {
+  color: #20BCC9;
+  border-color: #20BCC9;
+}
+#media-section .floor-plans .card {
+  position: relative;
+}
+#media-section .floor-plans .card .map-floor {
+  width: 50%;
+  margin: 0 auto;
+}
+#media-section .floor-plans .card .floor-menu {
+  list-style: none;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #F7F7F7;
+  border: 1px solid #DFE2EB;
+  border-radius: 0.5rem;
+  padding: 4px;
+}
+#media-section .floor-plans .card .floor-menu li a.dropdown-item {
+  text-decoration: none;
+  padding: 12px 20px !important;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  color: #9AA5B1;
+  font-weight: 700;
+  display: block;
+}
+#media-section .floor-plans .card .floor-menu li a.dropdown-item.active {
+  padding: 12px 20px;
+  color: #20BCC9;
+  border-color: #20BCC9;
+}
+
+#mortgage table thead th {
+  background-color: transparent !important;
+}
+
+footer .address {
+  font-weight: 500;
+  font-size: 20px;
+}
+footer .social-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+footer .made-by {
+  font-size: 12px;
+}
+
+#presentedby .user-img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
+}
+#presentedby .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+#presentedby .card-body span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.text-heading {
+  font-size: 4rem;
+}
+@media screen and (max-width: 991px) {
+  .text-heading {
+    font-size: 52px !important;
+  }
+}
+@media screen and (max-width: 577px) {
+  .text-heading {
+    font-size: 24px !important;
+  }
+}/*# sourceMappingURL=style-v2.css.map */
