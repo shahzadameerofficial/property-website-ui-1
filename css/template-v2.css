@@ -1,0 +1,318 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+main #details-pane {
+  background-color: #EDEDED;
+}
+main #details-pane .price-label span {
+  color: gray;
+}
+main #details-pane .price-label h2 {
+  font-weight: 700;
+}
+main #details-pane .specs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main #details-pane .specs span {
+  font-weight: 500;
+}
+main #property-about .food-image {
+  width: 100%;
+}
+main #property-about .cta-btns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+main #property-about .cta-btns a {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  text-decoration: none;
+  color: #3D9970;
+}
+main #property-about .cta-btns a:last-child {
+  margin-right: 8rem;
+}
+main #property-about .features {
+  margin-top: 4rem;
+}
+main #property-about .features .text-content h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+main #property-about .features .tags {
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+main #property-about .features .tags .tag {
+  background-color: #E2F0EA;
+  padding: 0.8rem 1rem;
+  font-weight: 500;
+}
+main #gallery .card .card-body img {
+  border-radius: 0;
+  width: 100%;
+  height: 300px;
+  -o-object-position: center;
+     object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #gallery .card .card-body a {
+  text-decoration: none;
+  color: #444444;
+}
+main #mortgage .mortgage-heading h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+main #mortgage .mortgage-heading p {
+  font-size: 20px;
+}
+main #mortgage table thead th {
+  background-color: #444444;
+  color: var(--bs-white);
+}
+main #getInTouch .main-form {
+  background-color: #444444;
+  font-family: "Inter", serif;
+}
+main #getInTouch .main-form form label {
+  color: var(--bs-white);
+  font-weight: 400;
+  font-family: "Inter", serif;
+}
+main #getInTouch .main-form form input {
+  border-radius: 0;
+  padding: 1rem;
+  font-family: "Inter", serif;
+}
+main #getInTouch .main-form form textarea {
+  font-family: "Inter", serif;
+}
+main #getInTouch .main-form form button {
+  border: 0;
+  background-color: transparent;
+  outline: 0;
+  width: 100%;
+  text-align: center;
+  padding: 0.8rem;
+  font-family: "Inter", serif;
+}
+main #getInTouch .main-form form button.submit-btn {
+  background-color: #3D9970;
+  border: 1px solid #3D9970;
+  color: var(--bs-white);
+}
+main #getInTouch .main-form form button.tour-btn {
+  border: 1px solid #3D9970;
+  color: var(--bs-white);
+}
+main #getInTouch .getintouchbg {
+  background-image: url(/img/webp/get-in-touch-bg.jpg);
+  background-position: center;
+  -webkit-backdrop-filter: brightness(50%);
+          backdrop-filter: brightness(50%);
+  height: 100%;
+}
+@media screen and (max-width: 991px) {
+  main #getInTouch .getintouchbg {
+    height: 480px;
+  }
+}
+main #getInTouch .getintouchbg h2 {
+  font-size: 3rem;
+  color: var(--bs-white);
+}
+main #testimonials .contact-header {
+  margin-bottom: 2rem;
+}
+main #testimonials .contact-header .contact-option {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+main #testimonials .contact-header .contact-option img {
+  width: 54px;
+}
+main #testimonials .contact-header .contact-option h3 {
+  font-weight: 500;
+  font-size: 24px;
+}
+@media screen and (max-width: 767px) {
+  main #testimonials .contact-header .contact-option h3 {
+    font-size: 14px;
+  }
+}
+main #testimonials .contact-header .contact-option a {
+  text-decoration: none;
+  color: #161C2D;
+}
+main #testimonials iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+main #mediaSection .main-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: 2;
+}
+main #mediaSection .main-gallery img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #mediaSection .main-gallery .img9-16 {
+  grid-row: 2 span;
+  aspect-ratio: 10/16;
+}
+main #mediaSection .main-gallery .img16-9 {
+  grid-column: 2 span;
+  aspect-ratio: 16/4;
+}
+main #mediaSection .main-gallery .img4-3 {
+  grid-column: 1 span;
+  aspect-ratio: 4/2;
+}
+main #mediaGallery .bg {
+  background-color: #444444;
+}
+main #mediaGallery .bg img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main #mediaGallery .bg .media-list {
+  background-color: var(--bs-white);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 3rem;
+}
+main #mediaGallery .bg .media-list .media {
+  align-self: flex-start;
+  padding: 1rem 2rem;
+  width: 100%;
+}
+main #mediaGallery .bg .media-list .media.active {
+  color: #3D9970;
+  box-shadow: 3px 0 0 0 #3D9970;
+  font-weight: 500;
+  background-color: rgba(61, 153, 112, 0.0509803922);
+}
+main #mediaGallery .media-section-selector {
+  border: 0;
+  outline: 0;
+  background-color: #f5faf8;
+  color: #3D9970;
+  padding: 20px;
+  border-right: 2px solid #3D9970;
+}
+
+footer .address {
+  font-weight: 500;
+  font-size: 20px;
+}
+footer .social-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+footer .made-by {
+  font-size: 12px;
+}
+
+.navbar {
+  background-color: rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+.text-heading-lg {
+  font-family: "Inter", serif;
+  font-size: 4rem;
+  font-weight: 700;
+}
+@media screen and (max-width: 577px) {
+  .text-heading-lg {
+    font-size: 24px !important;
+  }
+}
+@media screen and (max-width: 991px) {
+  .text-heading-lg {
+    font-size: 52px;
+  }
+}
+
+.text-heading-md {
+  font-size: 3rem;
+}
+
+.bg-fade {
+  background-color: #EDEDED;
+}
+
+.custom-shadow {
+  border: 1px solid red;
+  box-shadow: 0 10px 20px 0 rgba(120, 120, 128, 0.1) !important;
+}
+
+.dark-bg {
+  background-color: #444444;
+  width: 100%;
+  height: 80px;
+  transform: translateY(50px);
+}
+
+.custom-input:not(:focus),
+.custom-select:not(:focus),
+.custom-radio:not(:focus) {
+  background-color: #EDEDED;
+}
+
+@media screen and (max-width: 577px) {
+  .text-heading-lg {
+    font-size: 24px !important;
+  }
+  .circle-icon {
+    width: 24px !important;
+  }
+}
+@media screen and (max-width: 991px) {
+  .text-heading-lg {
+    font-size: 52px;
+  }
+  .circle-icon {
+    width: 40px !important;
+  }
+  .circle-icon ~ .text a {
+    font-size: 14px;
+  }
+  .sidebar-social {
+    top: 60% !important;
+  }
+}
+.sidebar-social {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  translate: 0 -50%;
+  list-style: none;
+  padding: 5px;
+  border-radius: 25px;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}/*# sourceMappingURL=template-v2.css.map */
